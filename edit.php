@@ -82,7 +82,9 @@ else{
     <div id="phoneHelp" class="form-text">We'll never share your phone number with anyone else.</div>
   </div>
 <!-- In Bootstrap 5.2 - w-100 is used to stretch button across the page. -->
-  <button type="submit" name="submit" class="btn btn-success w-100">Save Changes</button>
+  <a href="viewrecords.php" class="btn btn-default">Back to List</a>
+  <button type="submit" name="submit" class="btn btn-success">Save Changes</button>
+
 </form>
 
 <!-- The below opened at line 15 -->
