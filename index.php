@@ -63,6 +63,13 @@ $results = $crud->getSpecialties();
     <input type="text" class="form-control" id="phone" name="phone"aria-describedby="phoneHelp">
     <div id="phoneHelp" class="form-text">We'll never share your phone number with anyone else.</div>
   </div>
+  <br/>
+  <div class="custom file">
+    <label for="avatar" class="form-label">Upload Image(Optional)</label>
+    <input type="file" accept="image/*"class="custom-file-input" id="avatar" name="avatar">
+    <label class="custom-file-label"></label>
+  </div>
+
 <!-- In Bootstrap 5.2 - w-100 is used to stretch button across the page. -->
   <button type="submit" name="submit" class="btn btn-primary w-100">Submit</button>
 </form>
