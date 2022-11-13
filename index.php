@@ -20,8 +20,7 @@ $results = $crud->getSpecialties();
  -->
 
     <h1 class="text-center">Registration for IT Conference</h1>
-<!-- Definately does not work with method="post". Tried everything-->
-<form method="get" action="success.php">
+<form method="post" action="success.php">
   <div class="mb-3">
     <label for="firstname" class="form-label">First Name</label>
     <input required type="text" class="form-control" id="firstname" name="firstname">

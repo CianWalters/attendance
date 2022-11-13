@@ -3,20 +3,26 @@
 
 require_once 'includes/header.php'; 
 require_once 'db/conn.php';
+require_once 'sendemail.php';
 
-if(isset($_GET['submit'])){
+
+// var_dump($_POST);
+
+if(isset($_POST['submit'])){
     //extract values from the $_POST array
-    $fname = $_GET['firstname'];
-    $lname = $_GET['lastname'];
-    $dob = $_GET['dob'];
-    $email = $_GET['email'];
-    $contact = $_GET['phone'];
-    $specialty = $_GET['expertise'];
+    $fname = $_POST['firstname'];
+    $lname = $_POST['lastname'];
+    $dob = $_POST['dob'];
+    $email = $_POST['email'];
+    $contact = $_POST['phone'];
+    $specialty = $_POST['expertise'];
 
     //Call Function to insert and track if success or not
     $isSuccess = $crud->insertAttendees($fname, $lname, $dob, $email, $contact, $specialty);
+    $specialtyName = $crud->getSpecialtyById($specialty);
 
     if($isSuccess){
+        SendEmail::SendMail($email, 'Welcome to IT Conference 2022', 'You have successfully registered for this years\' IT Conference');
         //echo '<h1 class="text-center text-success">You Have Been Registered!</h1>';
         include 'includes/successmessage.php';
     }
@@ -66,20 +72,19 @@ if(isset($_GET['submit'])){
   <div class="card-body">
     <h5 class="card-title">
 
-<!-- Definately does not work with echo $_POST". Tried everything-->
-<?php echo $_GET['firstname'] . ' ' . $_GET['lastname']; ?>
+<?php echo $_POST['firstname'] . ' ' . $_POST['lastname']; ?>
     </h5>
     <h6 class="card-subtitle mb-2 text-muted">
-    <?php echo $_GET['expertise']; ?>
+    <?php echo $specialtyName['name']; ?>
     </h6>
     <p class="card-text">
-        Date of Birth: <?php echo $_GET['dob']; ?>
+        Date of Birth: <?php echo $_POST['dob']; ?>
     </p>
     <p class="card-text">
-        Email Address: <?php echo $_GET['email']; ?>
+        Email Address: <?php echo $_POST['email']; ?>
     </p>
     <p class="card-text">
-        Contact Number: <?php echo $_GET['phone']; ?>
+        Contact Number: <?php echo $_POST['phone']; ?>
     </p>
     
   </div>
