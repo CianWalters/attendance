@@ -1,10 +1,17 @@
 <?php
-    $host= '127.0.0.1';
-    $db = 'attendance_db';
-    $user = 'root';
-    $pass = '';
+    //$host= '127.0.0.1';
+    //$db = 'attendance_db';
+    //$user = 'root';
+    //$pass = '';
+    //$charset = 'utf8mb4';
+
+    //Azure Database connection
+    $host='applied-web.mysql.database.azure.com';
+    $user='applied_user@applied-web';
+    $password='P@ssword1';
+    $db = 'attendance_cian';
     $charset = 'utf8mb4';
-    //New Database connection should be placed here. 
+    
 
     $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
 
