@@ -17,7 +17,7 @@ if(isset($_POST['submit'])){
     $contact = $_POST['phone'];
     $specialty = $_POST['expertise'];
 
-    $orig_file = $_FILES["avatar"]["tpm_name"];
+    $orig_file = $_FILES["avatar"]["tmp_name"];
     $ext = pathinfo($_FILES["avatar"]["name"], PATHINFO_EXTENSION);
     $target_dir = 'uploads/';
     $destination = "$target_dir$contact.$ext";

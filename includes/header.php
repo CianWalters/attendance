@@ -26,18 +26,18 @@ include_once 'includes/session.php';
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav mr-auto">
-      <a class="nav-link active" href="index.php">Home <span class="sr-only"></span></a>
-      <a class="nav-link" href="viewrecords.php">View Attendees</a>
+      <a class="nav-item nav-link active" href="index.php">Home <span class="sr-only"></span></a>
+      <a class="nav-item nav-link" href="viewrecords.php">View Attendees</a>
     </div>
     <!-- ms-auto is used to margin right -->
     <div class="navbar-nav ms-auto">
       <?php
           if(!isset($_SESSION['userid'])){
       ?>
-        <a class="nav-item active" href="login.php">Login <span class="sr-only"></span></a>
+        <a class="nav-item nav-link" href="login.php">Login <span class="sr-only"></span></a>
       <?php }else { ?>
-        <a class="nav-link active" href="#"><span>Hello <?php echo $_SESSION['username'] ?>! </span> <span class="sr-only"></span></a>
-        <a class="nav-link active" href="logout.php">Logout <span class="sr-only"></span></a>
+        <a class="nav-link nav-link" href="#"><span>Hello <?php echo $_SESSION['username'] ?>! </span> <span class="sr-only"></span></a>
+        <a class="nav-link nav-link" href="logout.php">Logout <span class="sr-only"></span></a>
 
         <?php } ?>
     </div>

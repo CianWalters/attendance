@@ -115,7 +115,7 @@
                 try{
                 $sql = "SELECT * FROM `specialties` where specialty_id = :id";
                 $stmt = $this->db->prepare($sql);
-                $stmt->bindparam(':id'. $id);
+                $stmt->bindparam(':id', $id);
                 $stmt->execute();
                 $result = $stmt->fetch();
                 return $result;
