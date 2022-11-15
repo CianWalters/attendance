@@ -13,7 +13,7 @@
         $new_password = md5($password.$username);
 
         $result = $user->getUser($username,$new_password);
-        
+
         if(!$result){
             echo '<div class="alert alert-danger">Username or Password is incorrect! Please try again. </div>';
         }else{
@@ -27,7 +27,7 @@
 
     <h1 class="text-center"><?php echo $title ?> </h1>
 
-        <from action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method="post">
+        <form action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method="post">
             <table class="table table-sm">
                 <tr>
                     <td><label for="username">Username: * </label></td>
@@ -44,7 +44,7 @@
             <input type="submit" value="Login" class="btn btn-info w-100"><br/><br/><br/>
             <a href="#"> Forgot Password </a>
 
-        </from><br/><br/><br/><br/>
+</form><br/><br/><br/><br/>
 
  <?php include_once 'includes/footer.php'; ?>
 
