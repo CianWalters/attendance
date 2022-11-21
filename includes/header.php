@@ -16,10 +16,10 @@ include_once 'includes/session.php';
 <!-- below is the stylesheet from jquery for date -->
     <link rel="stylesheet" href="css/site.css" />
 
-    <title>Attendance - <?php echo $title ?></title>
+    <title>Wally Bee Fitness - <?php echo $title ?></title>
 </head>
-  <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-info">
+  <body style = "background: url(yellow-eraser.png)">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-warning">
   <a class="navbar-brand" href="index.php">IT Conference</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
