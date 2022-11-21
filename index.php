@@ -11,6 +11,8 @@ $results = $crud->getSpecialties();
 ?>
 
 <!-- 
+    Reuploaded 
+
     First Name
     Last Name
     Date of Birth (Using date picker)
