@@ -16,7 +16,7 @@ include_once 'includes/session.php';
 <!-- below is the stylesheet from jquery for date -->
     <link rel="stylesheet" href="css/site.css" />
 
-    <title>Wally Bee Fitness - <?php echo $title ?></title>
+    <title>Attendance - <?php echo $title ?></title>
 </head>
   <body style = "background: url(yellow-eraser.png)">
   <nav class="navbar navbar-expand-lg navbar-dark bg-info">
