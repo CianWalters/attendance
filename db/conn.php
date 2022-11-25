@@ -8,7 +8,7 @@
     // Azure Database connection
     $host='applied-web.mysql.database.azure.com';
     $user='appliedweb_user@applied-web';
-    $password='P@ssword1';
+    $pass='P@ssword1';
     $db = 'attendance_cian';
     $charset = 'utf8mb4';
     
