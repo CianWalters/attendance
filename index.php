@@ -41,7 +41,7 @@ $results = $crud->getSpecialties();
 <!-- The below taken from bootstrap 4.6 -->
   <div class="form-group">
     <label for="specialty">Area of Expertise</label>
-    <select class="form-control" id="expertise" name="expertise">
+    <select class="form-control" id="specialty" name="specialty">
       <!-- The below are hard coded options that were removed. Hard coding the database admin value as id 1 is not the best way. -->
       <!-- <option value="1">Database Admin</option>
       <option>Software Developer</option>
@@ -54,13 +54,13 @@ $results = $crud->getSpecialties();
     </select>
   </div>
 
-  <div class="mb-3">
+  <div class="form-group">
     <label for="email" class="form-label">Email address</label>
     <input required type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
     <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
   </div>
 
-  <div class="mb-3">
+  <div class="form-group">
     <label for="phone" class="form-label">Contact Number</label>
     <input type="text" class="form-control" id="phone" name="phone"aria-describedby="phoneHelp">
     <div id="phoneHelp" class="form-text">We'll never share your phone number with anyone else.</div>

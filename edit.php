@@ -34,8 +34,8 @@ else{
  -->
 
     <h1 class="text-center">Edit Record</h1>
-<!-- Definately does not work with method="post". Tried everything-->
-<form method="get" action="editpost.php">
+
+    <form method="post" action="editpost.php">
     <input type="hidden" name="id" value="<?php echo $attendee['attendee_id'] ?>" />
   <div class="mb-3">
     <label for="firstname" class="form-label">First Name</label>
@@ -55,7 +55,7 @@ else{
 <!-- The below taken from bootstrap 4.6 -->
   <div class="form-group">
     <label for="specialty">Area of Expertise</label>
-    <select class="form-control" id="expertise" name="expertise">
+    <select class="form-control" id="specialty" name="specialty">
       <!-- The below are hard coded options that were removed. Hard coding the database admin value as id 1 is not the best way. -->
       <!-- <option value="1">Database Admin</option>
       <option>Software Developer</option>
@@ -84,7 +84,10 @@ else{
   </div>
 <!-- In Bootstrap 5.2 - w-100 is used to stretch button across the page. -->
   <a href="viewrecords.php" class="btn btn-default">Back to List</a>
-  <button type="submit" name="submit" class="btn btn-success">Save Changes</button>
+
+  <br>
+  <br>
+  <button type="submit" name="submit" class="btn btn-success w-100">Save Changes</button>
 
 </form>
 
