@@ -32,7 +32,7 @@ include_once 'includes/session.php';
     <!-- ms-auto is used to margin right -->
     <div class="navbar-nav ms-auto">
       <?php
-          if(!isset($_SESSION['userid'])){
+          if(!isset($_SESSION['id'])){
       ?>
         <a class="nav-item nav-link" href="login.php">Login <span class="sr-only"></span></a>
       <?php }else { ?>
